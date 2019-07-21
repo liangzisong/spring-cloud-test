@@ -22,9 +22,12 @@ public class DeptServiceImpl implements DeptService
 	}
 
 	@Override
-	public Dept get(Long id)
-	{
-		return dao.findById(id);
+	public Dept get(Long id) {
+		Dept dept = dao.findById(id);
+		if(dept==null){
+			throw new RuntimeException("没有这个id");
+		}
+		return dept;
 	}
 
 	@Override

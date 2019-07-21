@@ -10,7 +10,7 @@
 	<select id="findAll" resultType="Dept">
 		select deptno,dname,db_source from dept;
 	</select>
-	<insert id="addDept" parameterType="Dept">
+	<insert id="addDept" >
 		INSERT INTO dept(dname,db_source) VALUES(#{dname},DATABASE());
 	</insert>
 
