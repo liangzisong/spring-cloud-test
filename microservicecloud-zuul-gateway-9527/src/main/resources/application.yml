@@ -19,13 +19,19 @@ zuul:
     # old address
     mydept.serviceId: microservicecloud-dept
     # new address
-    mydept.path: /mydept/**
+    mydept.path: /test/**
+    myfeign.serviceId: microservicecloud-feign
+    myfeign.path: /feigntest/**
+    # mydept.host: 8251
     # hide true address
-  ignored-services: "*"
+  # ignored-services: "*"
   # prefix name
-  prefix: /atguigu
+  # prefix: /liangzisong
 info:
   app.name: atguigu-microservicecloud
   company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+management:
+  security:
+    enabled: false

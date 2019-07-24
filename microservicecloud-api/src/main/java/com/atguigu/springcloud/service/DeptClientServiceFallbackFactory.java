@@ -72,19 +72,6 @@ public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptCli
 
             @Override
             public Dept get(Long id) {
-                System.out.println("throwable=");
-                if(throwable instanceof RuntimeException){
-                    throw (RuntimeException)throwable;
-                }
-                /*超时*/
-                if(throwable instanceof HystrixTimeoutException){
-
-                }
-                /*运行异常，可能是服务关闭*/
-                if(throwable instanceof HystrixRuntimeException){
-
-                }
-                throwable.printStackTrace();
                 Dept dept = new Dept();
                 {
                     dept.setDeptno(id);

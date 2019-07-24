@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.service;
 
 import com.atguigu.springcloud.entities.Dept;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,6 +27,7 @@ import java.util.List;
 public interface DeptClientService {
 
     @PostMapping(value = "/dept/add")
+//    @HystrixCommand
     public boolean add(Dept dept);
 
     @GetMapping(value = "/dept/get/{id}")
@@ -42,4 +44,6 @@ public interface DeptClientService {
 
     @GetMapping(value = "/dept/discovery")
     public Object discovery();
+
+
 }

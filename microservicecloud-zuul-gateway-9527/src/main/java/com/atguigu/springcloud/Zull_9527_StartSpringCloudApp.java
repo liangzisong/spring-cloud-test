@@ -37,9 +37,10 @@ package com.atguigu.springcloud;//
 //
 
 
-import com.atguigu.springcloud.myRule.MySelfRule;
+//import com.atguigu.springcloud.myRule.MySelfRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
@@ -56,7 +57,8 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
  */
 @SpringBootApplication
 @EnableZuulProxy
-@RibbonClient(name = "MICROSERVICECLOUD-DEPT",configuration = MySelfRule.class)
+//@EnableEurekaClient
+//@RibbonClient(name = "MICROSERVICECLOUD-DEPT",configuration = MySelfRule.class)
 public class Zull_9527_StartSpringCloudApp {
 
     public static void main(String[] args) {

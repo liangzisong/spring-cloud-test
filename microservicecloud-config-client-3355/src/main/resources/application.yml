@@ -1,0 +1,5 @@
+spring:
+  cloud:
+    config:
+      # this is origin file name
+      name: microservicecloud-config-client

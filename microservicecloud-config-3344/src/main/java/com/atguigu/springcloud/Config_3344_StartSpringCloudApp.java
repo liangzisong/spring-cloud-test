@@ -1,4 +1,4 @@
-package com.atguigu.springcloud.myRule;//
+package com.atguigu.springcloud;//
 //
 //
 //
@@ -37,27 +37,26 @@ package com.atguigu.springcloud.myRule;//
 //
 
 
-import com.netflix.loadbalancer.IRule;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * Copyright (C), 2002-2019
- * FileName: MyRule
+ * FileName: Config_344_StartSpringCloudApp
  * <p>
- * Description:  自定义rule
+ * Description:
  *
  * @author 如果这段代码非常棒就是梁子松写的
  * 如果这代码挺差劲那么我也不知道是谁写的
  * @version 1.0.0
- * @create 19-7-21 上午9:43
+ * @create 19-7-22 下午8:45
  */
-@Configuration
-public class MySelfRule {
+@SpringBootApplication
+@EnableConfigServer
+public class Config_3344_StartSpringCloudApp {
 
-    @Bean
-    public IRule myRule(){
-        return new MyNextRule();
+    public static void main(String[] args) {
+        SpringApplication.run(Config_3344_StartSpringCloudApp.class, args);
     }
-
 }
